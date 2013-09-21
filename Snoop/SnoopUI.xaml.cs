@@ -600,7 +600,7 @@ namespace Snoop
 			InputManager.Current.PreProcessInput -= this.HandlePreProcessInput;
 			EventsListener.Stop();
 
-			EditedPropertiesHelper.DumpObjectsWithEditedProperties();
+            //EditedPropertiesHelper.DumpObjectsWithEditedProperties(); \\We shouldn't be nuking the clipboard here
 
 			// persist the window placement details to the user settings.
 			WINDOWPLACEMENT wp = new WINDOWPLACEMENT();
@@ -630,7 +630,7 @@ namespace Snoop
 		{
 			// changing the selection captures any changes in the selected item at the time of window closing 
 			this.CurrentSelection = null;
-		    EditedPropertiesHelper.DumpObjectsWithEditedProperties();
+		    //EditedPropertiesHelper.DumpObjectsWithEditedProperties(); \\We shouldn't be nuking the clipboard here
 		}
 
 		#endregion
